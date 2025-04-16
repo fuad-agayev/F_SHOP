@@ -112,7 +112,7 @@
                    <div ref="zoomContainer" @mouseenter="showZoom = true" @mouseleave="showZoom = false" @mousemove="handleMouseMove"  class="relative overflow-hidden rounded-lg cursor-zoom-in">
                                <img :src="productImages[currentImageIndex]" :alt="product.name" class="w-full h-96 object-cover rounded-lg"/>
                                <!--   navigation arrowa  -->
-                               <button @click.stop="prevImage" class="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors">
+                               <button @click="prevImage" class="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors">
                                      <ChevronLeftIcon class="w-6 h-6"/>
                                </button>
 
