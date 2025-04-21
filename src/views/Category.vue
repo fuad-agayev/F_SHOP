@@ -94,7 +94,7 @@ const deepSubcategories = computed(() => {
       </ol>
     </nav>
 
-    <h1 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200">{{ category.name }}</h1>
+    <h1 class="text-3xl font-bold mb-8 text-gray-800 dark:text-red-500">{{ category.name }}</h1>
     
     <!-- Main Subcategories -->
     <div v-if="subcategories.length" class="mb-8">
@@ -111,7 +111,7 @@ const deepSubcategories = computed(() => {
 
     <!-- Nested Subcategories -->
     <div v-if="nestedSubcategories.length" class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">More Categories</h2>
+      <h2 class="text-2xl font-semibold mb-4 dark:text-amber-400"> More Categories </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <RouterLink v-for="nested in nestedSubcategories" 
                    :key="nested.id"
@@ -144,23 +144,40 @@ const deepSubcategories = computed(() => {
              class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
           <RouterLink :to="`/product/${product.id}`">
             <img :src="product.image" :alt="product.name" class="w-full h-48 object-cover">
-            <div class="p-4">
+               <div class="p-4">
               <h3 class="text-lg font-semibold mb-2 text-gray-800 dark:text-gray-200">{{ product.name }}</h3>
               <p class="text-gray-600 dark:text-gray-400">${{ product.price.toFixed(2) }}</p>
-            </div>
+              </div>
           </RouterLink>
-          <div class="p-4 pt-0">
+             <div class="p-4 pt-0">
             <button @click="addToCart(product)"
                     class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
               Add to Cart
             </button>
-          </div>
+             </div>
         </div>
       </div>
     </div>
+
   </div>
   <div v-else class="text-center py-8">
     <p class="text-gray-600 dark:text-gray-400">Category not found</p>
     <RouterLink to="/" class="text-blue-600 dark:text-blue-400 hover:underline">Return to Home</RouterLink>
   </div>
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

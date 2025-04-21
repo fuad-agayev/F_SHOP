@@ -7,6 +7,7 @@ const isLoading = ref(true)
 const selectedPost = ref<null | { id: number; title: string; content: string; fullContent: string; image: string; date: string; category: string }>(null);
 const showModal = ref(false)
 
+const showGrid = ref(false)
 const blogPosts = ref([
   {
     id: 1,
@@ -130,28 +131,45 @@ const closeModal = () => {
   showModal.value = false
 }
 
+
+
 onMounted(() => {
   setTimeout(() => {
-     isLoading.value = false
-  }, 4000)
+    isLoading.value = false
+  }, 5000)
+
+  window.addEventListener('scroll', handleScroll)
 })
+
+const handleScroll = () => {
+  const scrollY = window.scrollY
+  const triggerPoint = 200 // ne kadar scroll sonrası görünmesini istiyorsan
+  if (scrollY > triggerPoint) {
+    showGrid.value = true
+    window.removeEventListener('scroll', handleScroll) // bir kere çalışsın
+  }
+}
+
+
+
 </script>
 
 <template>
   <!-- Loading Animation -->
   <div v-if="isLoading" class="flex items-center justify-center min-h-screen">
     <div class="loading-dots">
-      <span>.</span>
-      <span>.</span>
-      <span>.</span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
 
   <!--  Blog Content  -->
     <div v-else class="max-w-6xl mx-auto">
-           <h1 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200" data-aos="fade-down"> Our Blog </h1>
+           <h1 class="text-3xl font-bold mb-8 text-gray-800 dark:text-gray-200"> Our Blog </h1>
            <!--  Featured Post Carousel  -->
-             <ElCarousel v-bind="carouselOptions" class="mb-12" data-aos="fade-up">
+             <ElCarousel v-bind="carouselOptions" class="mb-12">
                <ElCarouselItem v-for="post in blogPosts" :key="post.id">
                    <div class="h-full relative rounded-lg overflow-hidden">
                         <img :src="post.image" :alt="post.title" class="w-full h-full object-cover"/>
@@ -166,7 +184,7 @@ onMounted(() => {
              </ElCarousel>
 
              <!--   Blog Grid  -->
-            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-64">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-64 transition-opacity duration-1000 ease-in opacity-100">
               <article v-for="(post, index) in blogPosts" :key="post.id"
               class="bg-white w-[350px] dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
               :data-aos="'fade-up'" :data-aos-delay="index * 100">
@@ -224,34 +242,43 @@ onMounted(() => {
     </div>
 </template>
 <style scoped>
-.loading-dots {
+ .loading-dots {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3px; /* çubuklar arası boşluk */
+  height: 100vh; /* ortalamak istersen */
 }
 
 .loading-dots span {
-  animation: loading 1.4s infinite ease-in-out;
-  font-size: 100px;
+  width: 4px;
+  height: 14px;
+  background-color: rgba(0,0,0, 0.3);
   display: block;
-  color: #000;
+  animation: loading 2.2s infinite ease-in-out;
+  border-radius: 1px;
 }
 
 @keyframes loading {
   0%, 80%, 100% {
-    opacity: 0;
+    opacity: 0.1;
   }
-  40% {
-    opacity: 1;
+  50% {
+   opacity: 1;
   }
 }
-
+/* Her çubuğa farklı gecikme vererek sıralı animasyon */
 .loading-dots span:nth-child(1) {
-  animation-delay: -0.32s;
+  animation-delay: -0.6s;
 }
-
 .loading-dots span:nth-child(2) {
-  animation-delay: -0.16s;
+  animation-delay: -0.4s;
 }
+.loading-dots span:nth-child(3) {
+  animation-delay: -0.2s;
+}
+.loading-dots span:nth-child(4) {
+  animation-delay: -1s;
+} 
 
 </style>

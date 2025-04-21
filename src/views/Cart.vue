@@ -46,16 +46,59 @@ onMounted(() => {
                     Remove All Items 
                   </button>
            </div>
+             <div v-for="(item, index) in cartItems" :key="item.id" class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-4" :data-aos="'fade-up'" :data-aos-delay="index * 100">
+                   <div class="flex items-center">
+                         <img :src="item.image" :alt="item.name" class="w-24 h-24 object-cover rounded">
+                         <div class="ml-6 flex-grow">
+                                 <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-800"> {{ item.name }} </h3>
+                                 <p class="text-gray-600 dark:text-gray-400"> {{ item.price.toFixed(2) }} </p>
+                                 <div class="flex items-center mt-4">
+                                        <button @click="updateQuantity(item.id, item.quantity - 1)" class="px-2 py-1 border rounded dark:border-gray-600 dark:text-gray-200"> - </button>
+                                        <span class="mx-4 text-gray-800 dark:text-gray-200"> {{ item.quantity }} </span>
+                                        <button @click="updateQuantity(item.id, item.quantity + 1)" class="px-2 py-1 border rounded dark:border-gray-600 dark:text-gray-200"> + </button>
+                                        <button @click="removeFromCart(item.id)" class="ml-6 text-red-600 hover:text-red-800"> Remove </button>
+                                 </div>
+                         </div>
+                         <div class="text-right">
+                          <p class="text-lg font-semibold text-gray-800 dark:text-gray-200"> {{ (item.price * item.quantity).toFixed(2) }} </p>
+                        </div>
+                   </div>
+             </div>
+         </div>
 
-           
-
+         <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 h-fit" data-aos="fade-left" data-aos-delay="200">
+                  <h2 class="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200"> Order Summary </h2>
+                  <div class="space-y-3">
+                         <div class="flex justify-between text-gray-600 dark:text-gray-400">
+                               <span class=""> Subtotal: </span>
+                               <span class=""> ${{ totalAmount.toFixed(2) }} </span>
+                         </div>
+                         <div class="flex justify-between text-gray-600 dark:text-gray-40">
+                               <span class="">Shipping: </span>
+                               <span class="">Free</span>
+                         </div>
+                         <div class="border-t dark:border-gray-700 pt-3">
+                                 <div class="flex justify-between font-semibold text-lg text-gray-800 dark:text-gray-200">
+                                        <span class="">Total: </span>
+                                        <span class=""> {{ totalAmount.toFixed(2) }} </span>
+                                 </div>
+                         </div>
+                  </div>
+                  <RouterLink v-if="isAuthenticated" to="/checkout"
+                   class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors mt-6">
+                    Procceed to Checkout 
+                  </RouterLink>
+                  <button v-else @click="handleCheckoutClick" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition-colors mt-6">
+                       Only Proceed Checkout
+                  </button>
+                  <RouterLink to="/" 
+            class="block w-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-center
+                             py-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transitions-colors mt-3">
+                         Continue Shopping 
+                  </RouterLink>
          </div>
     </div>
   <!--   Login Modal -->
      <LoginModal :show="showLoginModal" @close="showLoginModal = false" @success="showLoginModal = false"/>
   </div>
 </template>
-
-<style scoped>
-
-</style>
