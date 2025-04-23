@@ -12,7 +12,7 @@ const emit = defineEmits<{
 
 const isVisible = ref(false)
 
-watch(() => props.show, (newValue) => {
+watch(() => [props.show, props.productName], ([newValue]) => {
   if (newValue) {
     isVisible.value = true
     setTimeout(() => {
@@ -46,7 +46,7 @@ watch(() => props.show, (newValue) => {
 
       <!-- Progress Bar -->
       <div class="h-1 w-full bg-white/20 rounded-b-lg overflow-hidden">
-        <div class="h-full bg-white/40 progress-bar"></div>
+        <div class="h-full bg-rose-500 progress-bar"></div>
       </div>
     </div>
   </Transition>
