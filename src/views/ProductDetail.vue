@@ -81,7 +81,8 @@
         if(!product.value) return []
         // Ürünün kendi resmini 5 kez tekrar eden bir dizi oluştur
        // Gerçek bir uygulamada burada ürünün farklı açılardan çekilmiş resimleri olurdu
-       return Array(5).fill(product.value.image)
+       return product.value.images || [product.value.image]
+       //return Array(5).fill(product.value.image)  Ayni sekilleri yapmak icin 
    })
 
    const showLightbox = ( index: number) => {

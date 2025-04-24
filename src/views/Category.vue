@@ -166,6 +166,9 @@ const deepSubcategories = computed(() => {
   </div>
 </template>
 
+<style scoped>
+/* sadece stil var */
+</style>
 
 
 

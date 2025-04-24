@@ -9,8 +9,20 @@
                    "image": "/images/blacbery-1.jpg",
                    "name": "Television",
                    "products": [
-                     {"id": 10101, "name": "Sharp 55\" 4K UHD Smart TV", "price": 599.99,  "image": "/images/speakers-1.jpg"},
-                     {"id": 10102, "name": "LG 65\" 4K UHD Smart TV", "price": 799.99, "image": "/images/mouse-1.webp"}
+                     {"id": 10101, "name": "Sharp 55\" 4K UHD Smart TV", "price": 599.99,  "image": "/images/speakers-1.jpg", "images": [
+                         "/images/texno-1.jpg",
+                         "/images/sony-head.jpg",
+                         "/images/hoporler.jpg",
+                         "/images/home-ai.jpg",
+                         "/images/mouse-1.webp"
+                       ]},
+                     {"id": 10102, "name": "LG 65\" 4K UHD Smart TV", "price": 799.99, "image": "/images/mouse-1.webp",
+                     "images":[
+                      "/images/hoporler.jpg",
+                      "/images/home-ai.jpg",
+                      "/images/mouse-1.webp"
+                     ]
+                    }
                    ]
                  },
                  {
@@ -21,25 +33,29 @@
                       "id": 10201,
                       "name": "Headphones",
                       "products": [
-                        {"id": 1020101, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones", "price": 349.99, "image": "/pictures/sharp-1.jpg"}
+                        {"id": 1020101, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones", "price": 349.99, "image": "/images/sony-head.jpg",
+                      "images":[
+                      "/images/home-ai.jpg",
+                      "/images/mouse-1.webp"
+                     ]}
                       ],
                       "deep_subcategories": [
                         {
                           "id": 1020102,
                           "name": "HeadPhone one",
                           "products": [
-                            {"id": 102010201, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones one", "price": 349.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 102010202, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones two", "price": 349.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 102010203, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones three", "price": 349.99, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 102010201, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones one", "price": 349.99, "image": "/images/home-ai.jpg"},
+                            {"id": 102010202, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones two", "price": 349.99, "image": "/images/hoporler.jpg"},
+                            {"id": 102010203, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones three", "price": 349.99, "image": "/images/sony-head.jpg"}
                           ]
                         },
                         {
                           "id": 1020103,
                           "name": "HeadPhone two",
                           "products": [
-                            {"id": 102010301, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones one one", "price": 349.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 102010302, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones two two", "price": 349.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 102010303, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones three three", "price": 349.99, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 102010301, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones one one", "price": 349.99, "image": "/images/texno-1.jpg"},
+                            {"id": 102010302, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones two two", "price": 349.99, "image": "/images/speakers-1.jpg"},
+                            {"id": 102010303, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones three three", "price": 349.99, "image": "/images/wireles-1.webp"}
                           ]
                         }
                       ]
@@ -48,16 +64,16 @@
                       "id": 10202,
                       "name": "Speakers",
                       "products": [
-                        {"id": 1020201, "name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/pictures/sharp-1.jpg"},
-                        {"id": 1020202, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones", "price": 349.99, "image": "/pictures/sony-wh-1000xm3.jpg"},
-                        {"id": 1020203,"name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/pictures/bose-soundlink-revolve.jpg"},
-                        {"id": 1020204,"name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/pictures/bose-soundlink-revolve.jpg"}
+                        {"id": 1020201, "name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/images/texno-1.jpg"},
+                        {"id": 1020202, "name": "Sony WH-1000XM3 Wireless Noise Cancelling Headphones", "price": 349.99, "image": "/images/mouse-1.webp"},
+                        {"id": 1020203,"name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/images/wireles-1.webp"},
+                        {"id": 1020204,"name": "Bose SoundLink Revolve+ Bluetooth Speaker", "price": 299.99, "image": "/images/wireles-1.webp"}
                       ]
                     }
                   ],
                   "products": [
-                    {"id": 1020301, "name": "Bose SoundLink Revolve+ Bluetooth Speaker 1", "price": 300.99, "image": "/pictures/sharp-1.jpg"},
-                    {"id": 1020302, "name": "Bose SoundLink Revolve+ Bluetooth Speaker 2", "price": 350.99, "image": "/pictures/sharp-1.jpg"}
+                    {"id": 1020301, "name": "Bose SoundLink Revolve+ Bluetooth Speaker 1", "price": 300.99, "image": "/images/texno-1.jpg"},
+                    {"id": 1020302, "name": "Bose SoundLink Revolve+ Bluetooth Speaker 2", "price": 350.99, "image": "/images/wireles-1.webp"}
                   ]
                 },
                  
@@ -65,8 +81,8 @@
                     "id": 103,
                     "name": "Video",
                     "products": [
-                      {"id": 10301, "name": "GoPro HERO8 Black", "price": 399.99, "image": "/pictures/gopro-hero8.jpg"},
-                      {"id": 10302, "name": "DJI Osmo Action", "price": 349.99, "image": "/pictures/dji-osmo-action.jpg"}
+                      {"id": 10301, "name": "GoPro HERO8 Black", "price": 399.99, "image": "/images/blacbery-1.jpg"},
+                      {"id": 10302, "name": "DJI Osmo Action", "price": 349.99, "image": "/images/blacbery-1.jpg"}
                     ]
                   }
         ]
@@ -79,18 +95,18 @@
                    "id": 201,
                    "name": "Computers",
                    "products": [
-                     {"id": 20101, "name": "Apple MacBook Pro 13\"", "price": 1299.99, "image": "/pictures/sharp-1.jpg"},
-                     {"id": 20102, "name": "Microsoft Surface Laptop 3", "price": 999.99, "image": "/pictures/surface-laptop-3.jpg"}
+                     {"id": 20101, "name": "Apple MacBook Pro 13\"", "price": 1299.99, "image": "/images/texno-1.jpg"},
+                     {"id": 20102, "name": "Microsoft Surface Laptop 3", "price": 999.99, "image": "/images/texno-1.jpg"}
                    ]
                  },
                   {
                     "id": 202,
                     "name": "Tablets",
                     "products": [
-                      {"id": 20201, "name": "Apple iPad Pro 11\"", "price": 799.99, "image": "/pictures/ipad-pro-11.jpg"},
-                      {"id": 20202, "name": "Samsung Galaxy Tab S6", "price": 649.99, "image": "/pictures/sharp-1.jpg"},
-                      {"id": 20201, "name": "Apple iPad Pro 11\"", "price": 799.99, "image": "/pictures/ipad-pro-11.jpg"},
-                      {"id": 20202, "name": "Samsung Galaxy Tab S6", "price": 649.99, "image": "/pictures/sharp-1.jpg"}
+                      {"id": 20201, "name": "Apple iPad Pro 11\"", "price": 799.99, "image": "/images/mi-smart-watch.png"},
+                      {"id": 20202, "name": "Samsung Galaxy Tab S6", "price": 649.99, "image": "/images/sony-head.jpg"},
+                      {"id": 20201, "name": "Apple iPad Pro 11\"", "price": 799.99, "image": "/images/mi-smart-watch.png"},
+                      {"id": 20202, "name": "Samsung Galaxy Tab S6", "price": 649.99, "image": "/images/sony-head.jpg"}
                     ]
                   }
         ]
@@ -103,16 +119,16 @@
                    "id": 301,
                    "name": "Smartphones",
                    "products": [
-                     {"id": 30101, "name": "Apple iPhone 11 Pro", "price": 999.99, "image": "/pictures/sharp-1.jpg"},
-                     {"id": 30102, "name": "Samsung Galaxy S20", "price": 999.99, "image": "/pictures/galaxy-s20.jpg"}
+                     {"id": 30101, "name": "Apple iPhone 11 Pro", "price": 999.99, "image": "/images/sony-head.jpg"},
+                     {"id": 30102, "name": "Samsung Galaxy S20", "price": 999.99, "image": "/images/wireles-1.webp"}
                    ]
                  },
                   {
                     "id": 302,
                     "name": "Accessories",
                     "products": [
-                      {"id": 30201, "name": "Apple AirPods Pro", "price": 249.99, "image": "/pictures/airpods-pro.jpg"},
-                      {"id": 30202, "name": "Samsung Galaxy Buds+", "price": 149.99, "image": "/pictures/galaxy-buds-plus.jpg"}
+                      {"id": 30201, "name": "Apple AirPods Pro", "price": 249.99, "image": "/images/hoporler.jpg"},
+                      {"id": 30202, "name": "Samsung Galaxy Buds+", "price": 149.99, "image": "/images/speakers-1.jpg"}
                     ]
                   }
                ]
@@ -121,8 +137,14 @@
                 "id": 4,
                 "name": "Watches",
                 "products": [
-                  {"id": 401, "name": "Apple Watch Series 5", "price": 399.99, "image": "/pictures/ferruci-1.webp"},
-                  {"id": 402, "name": "Samsung Galaxy Watch Active2", "price": 299.99, "image": "/pictures/daniel-1.webp"}
+                  {"id": 401, "name": "Apple Watch Series 5", "price": 399.99, "image": "/images/casio-6.webp"},
+                  {"id": 402, "name": "Samsung Galaxy Watch Active2", "price": 299.99, "image": "/images/casio-1.webp", "images": [
+                    "/images/casio-1.webp",
+                    "/images/casio-2.avif",
+                    "/images/casio-3.avif",
+                    "/images/casio-4.jpg",
+                    "/images/casio-5.webp"
+                  ]}
                 ]
               },
               {
@@ -133,41 +155,41 @@
                           "id": 501,
                           "name": "Kitchen appliances",
                           "products": [
-                            {"id": 50101, "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker", "price": 79.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 50102, "name": "Ninja Foodi 8-qt. 9-in-1 Deluxe XL Pressure Cooker & Air Fryer", "price": 199.99, "image": "/pictures/ninja-foodi.jpg"}
+                            {"id": 50101, "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker", "price": 79.99, "image": "/images/metbex.webp"},
+                            {"id": 50102, "name": "Ninja Foodi 8-qt. 9-in-1 Deluxe XL Pressure Cooker & Air Fryer", "price": 199.99, "image": "/images/qab.jpeg"}
                           ]
                         },
                         {
                           "id": 502,
                           "name": "Furniture",
                           "products": [
-                            {"id": 50201, "name": "Bookcase", "price": 299.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 50202, "name": "Dining table, ", "price": 499.99, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 50201, "name": "Bookcase", "price": 299.99, "image": "/images/mebel.jpg"},
+                            {"id": 50202, "name": "Dining table, ", "price": 499.99, "image": "/images/family.jpg"}
                           ]
                         },
                         {
                           "id": 503,
                           "name": "Carpets and Accessories",
                           "products": [
-                            {"id": 50301, "name": "Carpet", "price": 99.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 50302, "name": "Curtains", "price": 49.99, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 50301, "name": "Carpet", "price": 99.99, "image": "/images/hali.webp"},
+                            {"id": 50302, "name": "Curtains", "price": 49.99, "image": "/images/mebel.jpg"}
                            ]
                         },
                         {
                           "id": 504,
                           "name": "Lighting",
                           "products": [
-                            {"id": 50401, "name": "Table lamp", "price": 29.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 50402, "name": "Chandelier", "price": 199.99, "image": "/pictures/sharp-1.jpg"},
-                            {"id": 50403, "name": "Chandelier 2", "price": 199.89, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 50401, "name": "Table lamp", "price": 29.99, "image": "/images/stolustu-lampa.webp"},
+                            {"id": 50402, "name": "Chandelier", "price": 199.99, "image": "/images/cilcirak.jpg"},
+                            {"id": 50403, "name": "Chandelier 2", "price": 199.89, "image": "/images/cilcirak.jpg"}
                           ],
                           "nested_subcategories": [
                             {
                               "id": 5040401,
                               "name": "Light linen",
                               "products": [
-                                {"id": 504040101, "name": "Duvet cover and ligth", "price": 29.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 504040102, "name": "Sheet set light", "price": 19.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 504040101, "name": "Duvet cover and ligth", "price": 29.99, "image": "/images/light-digital.jpg"},
+                                {"id": 504040102, "name": "Sheet set light", "price": 19.99, "image": "/images/stolustu-lampa.webp"}
                               ]
                             },
 
@@ -175,8 +197,8 @@
                               "id": 5040502,
                               "name": "Colorful ",
                               "products": [
-                                {"id": 504050201, "name": "Bath ligting", "price": 9.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 504050202, "name": "Hand Lighting", "price": 5.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 504050201, "name": "Bath ligting", "price": 9.99, "image": "/images/stolustu-lampa.webp"},
+                                {"id": 504050202, "name": "Hand Lighting", "price": 5.99, "image": "/images/hamam.jpg"}
                               ]
                             }
                           ]
@@ -189,8 +211,8 @@
                               "id": 50501,
                               "name": "Bed linen",
                               "products": [
-                                {"id": 5050101, "name": "Duvet cover and pillowcase", "price": 29.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 5050102, "name": "Sheet set", "price": 19.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 5050101, "name": "Duvet cover and pillowcase", "price": 29.99, "image": "/images/yastik.jpg"},
+                                {"id": 5050102, "name": "Sheet set", "price": 19.99, "image": "/images/yorgan.webp"}
                               ]
                             },
 
@@ -198,8 +220,8 @@
                               "id": 50502,
                               "name": "Towels",
                               "products": [
-                                {"id": 5050201, "name": "Bath towel", "price": 9.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 5050202, "name": "Hand towel", "price": 5.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 5050201, "name": "Bath towel", "price": 9.99, "image": "/images/desmal.webp"},
+                                {"id": 5050202, "name": "Hand towel", "price": 5.99, "image": "/images/desmal.webp"}
                               ]
                             },
 
@@ -207,8 +229,8 @@
                               "id": 50503,
                               "name": "Curtains",
                               "products": [
-                                {"id": 5050301, "name": "Curtains", "price": 49.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 5050302, "name": "Curtains", "price": 49.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 5050301, "name": "Curtains", "price": 49.99, "image": "/images/perde.webp"},
+                                {"id": 5050302, "name": "Curtains", "price": 49.99, "image": "/images/perde.webp"}
                           ]                         
                         },
 
@@ -216,7 +238,7 @@
                           "id": 50504,
                           "name": "Mattresses",
                           "products": [
-                            {"id": 50601, "name": "Mattress", "price": 299.99, "image": "/pictures/sharp-1.jpg"}
+                            {"id": 50601, "name": "Mattress", "price": 299.99, "image": "/images/dosek.webp"}
                           ]
                         },
 
@@ -228,24 +250,24 @@
                               "id": 5050501,
                               "name": "Pillows",
                               "products": [
-                                {"id": 505050101, "name": "Pillow", "price": 19.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 505050102, "name": "Pillow", "price": 19.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 505050101, "name": "Pillow", "price": 19.99, "image": "/images/balis.jpeg"},
+                                {"id": 505050102, "name": "Pillow", "price": 19.99, "image": "/images/balis.jpeg"}
                               ]
                             },
                             {
                               "id": 5050502,
                               "name": "Blankets",
                               "products": [
-                                {"id": 505050201, "name": "Blanket", "price": 29.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 505050202, "name": "Blanket", "price": 29.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 505050201, "name": "Blanket", "price": 29.99, "image": "/images/yastik.jpg"},
+                                {"id": 505050202, "name": "Blanket", "price": 29.99, "image": "/images/yorgan.webp"}
                               ]
                             },
                             {
                               "id": 5050503,
                               "name": "Childrens Pillows and Blankets",
                               "products": [
-                                {"id": 505050301, "name": "Children Blank", "price": 20.99, "image": "/pictures/sharp-1.jpg"},
-                                {"id": 505050302, "name": "Children Pillow", "price": 21.99, "image": "/pictures/sharp-1.jpg"}
+                                {"id": 505050301, "name": "Children Blank", "price": 20.99, "image": "/images/perde.webp"},
+                                {"id": 505050302, "name": "Children Pillow", "price": 21.99, "image": "/images/yorgan.webp"}
                               ]
                             }
                           ]
