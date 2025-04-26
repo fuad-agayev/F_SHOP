@@ -1,5 +1,5 @@
 import { useStorage } from '@vueuse/core'
-
+import { onMounted } from 'vue'
 const isDark = useStorage('dark-mode', false)
 
 export function useDarkMode() {
@@ -7,7 +7,7 @@ export function useDarkMode() {
     isDark.value = !isDark.value
     updateTheme()
   }
-
+console.log("is dark yuklendi: ", isDark.value)
   const setDarkMode = (value: boolean) => {
      isDark.value = value
      updateTheme()
@@ -20,8 +20,10 @@ export function useDarkMode() {
     document.documentElement.classList.remove('dark')
    }
   }
-
+onMounted(()=>{
   updateTheme()
+})
+ 
 
   return {
     isDark,

@@ -43,7 +43,7 @@ const searchResults = computed(() => {
                        </div>
                   </RouterLink>
                   <div class="p-4 pt-0">
-                         <button @click="addToCart(product)" class="w-full text-blue-600 bg-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                         <button @click="addToCart(product)" class="w-full font-bold text-amber-900 bg-blue-300 py-2 rounded-lg hover:bg-blue-100 cursor-pointer transition-colors">
                           Add To Cart
                          </button>
                   </div>

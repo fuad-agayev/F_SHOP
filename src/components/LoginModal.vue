@@ -54,7 +54,6 @@ const handleSubmit = async (e: Event) => {
 }
 
 const handleClose = () => {
-  console.log('handleClose triggered') // Bunu ekle
   email.value = ''
   password.value = ''
   error.value = ''
@@ -89,15 +88,11 @@ watch(() => props.show, (newValue) => {
       <div class="fixed inset-0 overflow-y-auto">
         <div class="flex min-h-screen items-center justify-center p-4">
           <!-- Modal Content -->
-          <div 
-            class="relative w-full max-w-md rounded-lg bg-white dark:bg-gray-800 p-8 shadow-xl transform transition-all">
+          <div class="relative w-full max-w-md rounded-lg bg-white dark:bg-gray-800 p-8 shadow-xl transform transition-all" @click.stop>
             <!-- Close button -->
-            <button 
-              @click="handleClose"
-              class="absolute right-4 top-4 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 cursor-pointer"
-            >
+            <button @click="handleClose" class="absolute right-4 top-4 text-gray-400 hover:text-gray-500 dark:hover:text-gray-300">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
               </svg>
             </button>
 
