@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import { useToast } from 'vue-toastification'
+import { POSITION, useToast } from 'vue-toastification'
 
 interface CartItem {
   id: number
@@ -55,7 +55,7 @@ export function useCart() {
       // Show toast notification for removal
       toast.error(`${removedItem.name} removed from cart!`, {
         timeout: 2000,
-        position: "top-right",
+        position: POSITION.TOP_RIGHT,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
@@ -77,7 +77,7 @@ export function useCart() {
         item.quantity = quantity
         toast.info(`${item.name} quantity updated!`, {
           timeout: 2000,
-          position: "top-right",
+          position: POSITION.TOP_RIGHT,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
@@ -95,7 +95,7 @@ export function useCart() {
     cartItems.value = []
     toast.error('All items removed from cart!', {
       timeout: 2000,
-      position: "top-right",
+      position: POSITION.TOP_RIGHT,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,

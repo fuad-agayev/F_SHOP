@@ -107,7 +107,7 @@ const blogPosts = ref([
 interface CarouselOptions {
   autoplay: boolean;
   interval: number;
-  type: string;
+  type: 'card';
   height: string;
 }
 
@@ -183,26 +183,44 @@ const handleScroll = () => {
                </ElCarouselItem>
              </ElCarousel>
 
-             <!-- Blog Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 mt-16 transition-opacity duration-1000 ease-in opacity-100">
-  <article v-for="(post, index) in blogPosts" :key="post.id"
-    class="bg-white w-full max-w-xs dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-    :data-aos="'fade-up'" :data-aos-delay="index * 100">
-    <img :src="post.image" :alt="post.title" class="w-full h-48 object-cover">
-
-    <div class="p-6">
-      <span class="text-blue-600 dark:text-blue-400 text-sm font-medium"> {{ post.category }} </span>
-      <h3 class="text-xl font-semibold mb-2 mt-1 text-gray-800 dark:text-gray-200"> {{ post.title }} </h3>
-      <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3"> {{ post.content }}</p>
-
-      <div class="flex items-center justify-center">
-        <span class="text-sm text-gray-500 dark:text-gray-500"> {{  new Date(post.date).toLocaleDateString() }}</span>
-        <button @click="openModal(post)" class="text-blue-600 dark:text-blue-400 hover:underline font-medium p-2"> Read More </button>
-      </div>
+          <!-- Blog Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article 
+        v-for="(post, index) in blogPosts" 
+        :key="post.id"
+        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+        :data-aos="'fade-up'"
+        :data-aos-delay="index * 100"
+      >
+        <img 
+          :src="post.image" 
+          :alt="post.title"
+          class="w-full h-48 object-cover"
+        >
+        <div class="p-6">
+          <span class="text-blue-600 dark:text-blue-400 text-sm font-medium">
+            {{ post.category }}
+          </span>
+          <h3 class="text-xl font-semibold mb-2 mt-1 text-gray-800 dark:text-gray-200">
+            {{ post.title }}
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+            {{ post.content }}
+          </p>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-gray-500 dark:text-gray-500">
+              {{ new Date(post.date).toLocaleDateString() }}
+            </span>
+            <button 
+              @click="openModal(post)"
+              class="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            >
+              Read More
+            </button>
+          </div>
+        </div>
+      </article>
     </div>
-  </article>
-</div>
-
             <!--  t modal   -->
                <Transition name="modal">
                     <div v-if="showModal && selectedPost" class="fixed inset-0 z-50 overflow-y-auto" @close="closeModal">

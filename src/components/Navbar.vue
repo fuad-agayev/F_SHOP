@@ -40,9 +40,11 @@ const mobileSelectedSubcategory = ref<any>(null)
 const mobileSelectedNestedSubcategory = ref<any>(null)
 
 // Category hover states
-const hoveredCategory = ref(null)
-const hoveredSubcategory = ref(null)
-const hoveredNestedSubcategory = ref(null)
+
+
+const hoveredCategory = ref()
+const hoveredSubcategory = ref()
+const hoveredNestedSubcategory = ref()
 
 // Search results
 const searchResults = computed(() => {
@@ -142,6 +144,12 @@ watch(searchInput, (newValue) => {
   showSearchResults.value = Boolean(newValue.trim())
 })
 
+function handleSystemModeClick() {
+  if (typeof window !== 'undefined') {
+    setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches)
+  }
+  showDarkModeMenu.value = false
+}
 // Watch route changes
 watch(route, () => {
   showMobileMenu.value = false
@@ -399,7 +407,7 @@ onUnmounted(() => {
                   <span class="text-gray-900 dark:text-gray-100">Dark</span>
                 </button>
                 <button
-                  @click="setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches); showDarkModeMenu = false"
+                  @click="handleSystemModeClick; showDarkModeMenu = false" 
                   class="flex items-center w-full px-4 py-2 text-left rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <ComputerDesktopIcon class="w-5 h-5 mr-3 text-gray-500" />
